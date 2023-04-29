@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="col-sm-6 clearfix">
+    <app-to-do-creator (taskCreated)="addTask($event)"></app-to-do-creator>
+  </div>
+  <div class="col-sm-6">
+    <div class="h3">to do:</div>
+    <p *ngIf="nothingToDo">Nothing to do :(</p>
+    <app-task *ngFor="let task of toDoTasks" [task]="task" (deleteTask)="deleteTask($event)" (finishTask)="markTaskDone($event)"></app-task>
+    <hr>
+    <div class="h3">done:</div>
+    <p *ngIf="nothingDone">Nothing is done yet :(</p>
+    <app-task *ngFor="let task of doneTasks" [task]="task" (deleteTask)="deleteTask($event)" (unDoneTask)="markTaskUndone($event)"></app-task>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="title">title</label>
+        <input type="text" class="form-control" placeholder="Do the dishes" name="title" #titleInput>
+    </div>
+    <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" placeholder="you have to do it!!!" name="description" #descriptionInput>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">ADD</button>
+
+</form>

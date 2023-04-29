@@ -1,0 +1,14 @@
+<div class="row-xs-6">
+    <div class="task" data-id="{{task.id}}">
+        <div class="title">{{task.title}}</div>
+        <!-- <div class="title">{{task.description}}</div> --> 
+        <div class="buttons">
+            <button *ngIf="task.isDone" (click)="onUnDoneButton($event)" class="undone-button btn btn-primary">^</button>
+            <button *ngIf="!task.isDone" (click)="onDoneButton($event)" class="done-button btn btn-success">V</button>
+            <button (click)="onDeleteButton($event)" class="delete-button btn btn-danger">X</button>
+        </div>
+        
+        
+    </div>
+    
+</div>

@@ -1,0 +1,16 @@
+.task{
+    background-color: rgba(30, 143, 255, 0.542);
+    padding: 6px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 5px;
+    .buttons{
+        margin-left: auto;
+    }
+    
+    .btn{
+        margin-right: 3px;
+    }
+}
